@@ -12,4 +12,8 @@
     <string name="hat">Hat</string>
     <string name="eyebrows">Eyebrows</string>
     <string name="question">What should Mr. Potato Head wear?</string>
+    <string name="all">Check all</string>
+    <string name="none">Uncheck all</string>
+    <string name="checkall">check all</string>
+    <string name="checknone">check none</string>
 </resources>
