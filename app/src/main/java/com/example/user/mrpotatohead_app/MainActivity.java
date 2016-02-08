@@ -150,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
     }
     View.OnClickListener all = new View.OnClickListener() {
         public void onClick(View v) {
-            // onclick finished todo button
             checkarms.setChecked(true);
             checkears.setChecked(true);
             checkeyebrows.setChecked(true);
@@ -176,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
 
     View.OnClickListener none = new View.OnClickListener() {
         public void onClick(View v) {
-            // onclick finished todo button
             checkarms.setChecked(false);
             checkears.setChecked(false);
             checkeyebrows.setChecked(false);
