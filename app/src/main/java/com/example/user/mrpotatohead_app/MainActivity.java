@@ -8,7 +8,6 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
     ImageView arms;
     ImageView ears;
     ImageView eyebrows;
@@ -77,16 +76,14 @@ public class MainActivity extends AppCompatActivity {
         checknone.setOnClickListener(none);
     }
 
-    // nog check all en check none toevoegen
-
     public void onCheckboxClicked(View view) {
-        // Is view checked?
+        // Is view checked? Creates a boolean for this
         boolean checked = ((CheckBox) view).isChecked();
 
         // Check which checkbox was clicked
-        // delete nu de checkboxes, omdat die de view delete en niet de afbeeldingen!
         switch(view.getId()) {
             case R.id.checkarms:
+                // Set element to either visible or invisible
                 if (checked)
                     arms.setVisibility(View.VISIBLE);
                 else
@@ -148,53 +145,56 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
     View.OnClickListener all = new View.OnClickListener() {
         public void onClick(View v) {
-            checkarms.setChecked(true);
-            checkears.setChecked(true);
-            checkeyebrows.setChecked(true);
-            checkeyes.setChecked(true);
-            checkglasses.setChecked(true);
-            checkhat.setChecked(true);
-            checkmouth.setChecked(true);
-            checkmustache.setChecked(true);
-            checknose.setChecked(true);
-            checkshoes.setChecked(true);
-            arms.setVisibility(View.VISIBLE);
-            ears.setVisibility(View.VISIBLE);
-            eyebrows.setVisibility(View.VISIBLE);
-            eyes.setVisibility(View.VISIBLE);
-            glasses.setVisibility(View.VISIBLE);
-            hat.setVisibility(View.VISIBLE);
-            mouth.setVisibility(View.VISIBLE);
-            mustache.setVisibility(View.VISIBLE);
-            nose.setVisibility(View.VISIBLE);
-            shoes.setVisibility(View.VISIBLE);
+        // Checkboxes get set to checked and the element becomes visible
+        checkarms.setChecked(true);
+        checkears.setChecked(true);
+        checkeyebrows.setChecked(true);
+        checkeyes.setChecked(true);
+        checkglasses.setChecked(true);
+        checkhat.setChecked(true);
+        checkmouth.setChecked(true);
+        checkmustache.setChecked(true);
+        checknose.setChecked(true);
+        checkshoes.setChecked(true);
+        arms.setVisibility(View.VISIBLE);
+        ears.setVisibility(View.VISIBLE);
+        eyebrows.setVisibility(View.VISIBLE);
+        eyes.setVisibility(View.VISIBLE);
+        glasses.setVisibility(View.VISIBLE);
+        hat.setVisibility(View.VISIBLE);
+        mouth.setVisibility(View.VISIBLE);
+        mustache.setVisibility(View.VISIBLE);
+        nose.setVisibility(View.VISIBLE);
+        shoes.setVisibility(View.VISIBLE);
         }
     };
 
     View.OnClickListener none = new View.OnClickListener() {
         public void onClick(View v) {
-            checkarms.setChecked(false);
-            checkears.setChecked(false);
-            checkeyebrows.setChecked(false);
-            checkeyes.setChecked(false);
-            checkglasses.setChecked(false);
-            checkhat.setChecked(false);
-            checkmouth.setChecked(false);
-            checkmustache.setChecked(false);
-            checknose.setChecked(false);
-            checkshoes.setChecked(false);
-            arms.setVisibility(View.INVISIBLE);
-            ears.setVisibility(View.INVISIBLE);
-            eyebrows.setVisibility(View.INVISIBLE);
-            eyes.setVisibility(View.INVISIBLE);
-            glasses.setVisibility(View.INVISIBLE);
-            hat.setVisibility(View.INVISIBLE);
-            mouth.setVisibility(View.INVISIBLE);
-            mustache.setVisibility(View.INVISIBLE);
-            nose.setVisibility(View.INVISIBLE);
-            shoes.setVisibility(View.INVISIBLE);
+        // Checkboxes get set to unchecked and the element becomes invisible
+        checkarms.setChecked(false);
+        checkears.setChecked(false);
+        checkeyebrows.setChecked(false);
+        checkeyes.setChecked(false);
+        checkglasses.setChecked(false);
+        checkhat.setChecked(false);
+        checkmouth.setChecked(false);
+        checkmustache.setChecked(false);
+        checknose.setChecked(false);
+        checkshoes.setChecked(false);
+        arms.setVisibility(View.INVISIBLE);
+        ears.setVisibility(View.INVISIBLE);
+        eyebrows.setVisibility(View.INVISIBLE);
+        eyes.setVisibility(View.INVISIBLE);
+        glasses.setVisibility(View.INVISIBLE);
+        hat.setVisibility(View.INVISIBLE);
+        mouth.setVisibility(View.INVISIBLE);
+        mustache.setVisibility(View.INVISIBLE);
+        nose.setVisibility(View.INVISIBLE);
+        shoes.setVisibility(View.INVISIBLE);
         }
     };
 }

@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.user.mrpotatohead_app.MainActivity"
     android:orientation="vertical" >
-    
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,11 +17,11 @@
         android:textSize="20sp"
         android:gravity="center_horizontal" />
 
+    // Images in a relativelayout so they can be on top of each other
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        android:id="@+id/images" >
+        android:layout_weight="4" >
 
         <ImageView
             android:id="@+id/body"
@@ -96,19 +96,20 @@
         android:text="@string/question"
         android:gravity="center_horizontal" />
 
+    // Linearlayout containing the checkboxes and buttons
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_horizontal" >
+        android:gravity="center_horizontal"
+        android:layout_weight="1" >
 
-
-
+        // Two rows of checkboxes by using a vertical linearlayout
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            
+
             <CheckBox
                 android:id="@+id/checknose"
                 android:layout_width="wrap_content"
@@ -177,10 +178,11 @@
                 android:onClick="onCheckboxClicked" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal" >
 
         <Button
             android:layout_width="wrap_content"
