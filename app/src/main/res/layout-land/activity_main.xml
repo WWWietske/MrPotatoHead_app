@@ -10,11 +10,30 @@
     tools:context="com.example.user.mrpotatohead_app.MainActivity"
     android:orientation="horizontal" >
 
+    // Two horizontal columns in the linear layout one with image and one with checkboxes
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="2">
+
+        // Buttons don't fit below the checkboxes in landscape view
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkall"
+                android:text="@string/checkall" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checknone"
+                android:text="@string/checknone"/>
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -186,21 +205,6 @@
                     android:onClick="onCheckboxClicked" />
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" >
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checkall"
-                android:text="@string/checkall" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/checknone"
-                android:text="@string/checknone"/>
-        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
